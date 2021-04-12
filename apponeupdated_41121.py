@@ -59,6 +59,26 @@ def register():
 def bankOperation(user):
     print("Welcome %s %s " % (user[0], user[1] ) )
  
+    selectedOption = 1
+    while selectedOption < 4:
+        selectedOption = int(input('Please select option:'))
+        if selectedOption == 1:
+            print('you selected %s' % selectedOption)
+            withdraw = str(input("How much would you like to withdraw?, $200, $400, or $500?"))
+            print('Take your cash')
+        elif selectedOption == 2:
+            currentBalance = 0
+            print('you selected %s'  % selectedOption)
+            print('your balance %s' % currentBalance)
+            deposit = str(input("How much would you like to deposit?")) #100
+            currentBalance = currentBalance + deposit 
+            print("Your current balance is ", currentBalance)
+        elif selectedOption == 3:
+            print ('you selected %d'  % selectedOption)
+            compliant = input('What is issue would you like to report?')
+            print('Thank you for contacting us')
+        else:
+            break
     selectedOption = input("What would you like to do? (1) deposit (2) withdrawal (3) Logout (4) Exit ")
 
     if(selectedOption == 1):  
